@@ -25,7 +25,7 @@ Linear(512 → 128) → SiLU
      ↓
 Linear(128 → 2)
      ↓
-[0: RAG 불필요 / 1: RAG 필요]
+[0: RAG 불필요 / 1: RAG 필요]```
 
 <img src="https://img.shields.io/badge/Backbone-Qwen3--Embedding--0.6B-blue" alt="Backbone">
 <img src="https://img.shields.io/badge/Classifier-Custom%20MLP-brightgreen" alt="Classifier">
