@@ -13,23 +13,22 @@
 <img src="https://img.shields.io/badge/Task-RAG%20Routing%20%28이진%20분류%29-orange" alt="Task">
 <img src="https://img.shields.io/badge/Language-한국어%20·%20다국어-FFD21E" alt="Lang">
 
-## 모델 아키텍처
+### 아키텍처 흐름도
+<div align="center">
 
 ```text
-[Input Text]
-     ↓
-Tokenizer → Qwen3-Embedding-0.6B (768-dim)
-     ↓
-Mean Pooling (with attention_mask)
-     ↓
-LayerNorm(768)
-     ↓
-Linear(768 → 512) → SiLU → Dropout(0.2)
-     ↓
-Linear(512 → 128) → SiLU
-     ↓
-Linear(128 → 2)
-     ↓
-[0: RAG 불필요 / 1: RAG 필요]
-
+                  [입력 문장]
+                      ↓
+        ┌─────────────────────────────┐
+        │ Qwen3-Embedding-0.6B (768-dim) │
+        └─────────────────────────────┘
+                      ↓
+             Mean Pooling (+ mask)
+                      ↓
+                LayerNorm(768)
+                      ↓
+         Linear → SiLU → Dropout(0.2)
+             768 → 512 → 128 → 2
+                      ↓
+          [0: RAG 불필요 │ 1: RAG 필요]
 
