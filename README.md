@@ -1,11 +1,6 @@
 # RAG 필요 여부 분류기  
 ### Qwen3-Embedding-0.6B + Custom Neural Network Classifier
 
-<img src="https://img.shields.io/badge/Backbone-Qwen3--Embedding--0.6B-blue" alt="Backbone">
-<img src="https://img.shields.io/badge/Classifier-Custom%20MLP-brightgreen" alt="Classifier">
-<img src="https://img.shields.io/badge/Task-RAG%20Routing%20%28이진%20분류%29-orange" alt="Task">
-<img src="https://img.shields.io/badge/Language-한국어%20·%20다국어-FFD21E" alt="Lang">
-
 ## 한 줄 요약
 
 **임베딩은 Qwen3-Embedding-0.6B**가 만들고,  
@@ -32,3 +27,7 @@ Linear(128 → 2)
      ↓
 [0: RAG 불필요 / 1: RAG 필요]
 
+<img src="https://img.shields.io/badge/Backbone-Qwen3--Embedding--0.6B-blue" alt="Backbone">
+<img src="https://img.shields.io/badge/Classifier-Custom%20MLP-brightgreen" alt="Classifier">
+<img src="https://img.shields.io/badge/Task-RAG%20Routing%20%28이진%20분류%29-orange" alt="Task">
+<img src="https://img.shields.io/badge/Language-한국어%20·%20다국어-FFD21E" alt="Lang">
