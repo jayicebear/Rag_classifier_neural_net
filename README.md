@@ -19,16 +19,14 @@
 ```text
                   [입력 문장]
                       ↓
-        ┌─────────────────────────────┐
-        │ Qwen3-Embedding-0.6B (768-dim) │
-        └─────────────────────────────┘
+        Qwen3-Embedding-0.6B (1024-dim)
                       ↓
              Mean Pooling (+ mask)
                       ↓
-                LayerNorm(768)
+                LayerNorm(1024)
                       ↓
          Linear → SiLU → Dropout(0.2)
-             768 → 512 → 128 → 2
+             1024 → 512 → 128 → 2
                       ↓
           [0: RAG 불필요 │ 1: RAG 필요]
 
